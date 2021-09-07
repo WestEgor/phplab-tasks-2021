@@ -21,20 +21,20 @@ class Arrays implements ArraysInterface
 
     public function getUniqueValue(array $input): int
     {
-        $newArr = array_count_values($input);
-        $newArr = $this->removeDuplicates($newArr);
-        return empty($newArr) ? 0 : min($newArr);
+        $generalValuesArray = array_count_values($input);
+        $uniqueArray = $this->removeDuplicates($generalValuesArray);
+        return empty($uniqueArray) ? 0 : min($uniqueArray);
     }
 
     private function removeDuplicates(array $input): array
     {
-        $newArr = [];
+        $uniqueArray = [];
         foreach ($input as $key => $value) {
             if ($value === 1) {
-                $newArr[] = $key;
+                $uniqueArray[] = $key;
             }
         }
-        return $newArr;
+        return $uniqueArray;
     }
 
 
