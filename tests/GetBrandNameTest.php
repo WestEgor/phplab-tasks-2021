@@ -1,5 +1,6 @@
 <?php
 
+use src\strings\Strings;
 use PHPUnit\Framework\TestCase;
 
 class GetBrandNameTest extends TestCase
@@ -8,7 +9,7 @@ class GetBrandNameTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->strings = new strings\Strings();
+        $this->strings = new Strings();
     }
 
     /**
